@@ -48,8 +48,7 @@ def merge_pdfs_in_folder(folder_path, output_path):
 
     # Merge all PDFs in the specified folder
     merge_pdfs_in_folder(folder_path, output_pdf)
-
-
+    
 
 # Path to tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\wangk.MSI\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
