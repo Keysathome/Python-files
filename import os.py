@@ -1,5 +1,9 @@
 import os
 import PyPDF2
+import fitz  # PyMuPDF
+import pytesseract
+from PIL import Image
+import io
 
 
 def merge_pdfs_in_folder(folder_path, output_path):
@@ -45,10 +49,7 @@ def merge_pdfs_in_folder(folder_path, output_path):
     # Merge all PDFs in the specified folder
     merge_pdfs_in_folder(folder_path, output_pdf)
 
-import fitz  # PyMuPDF
-import pytesseract
-from PIL import Image
-import io
+
 
 # Path to tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\wangk.MSI\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
@@ -88,7 +89,7 @@ def ocr_and_process_pdf(input_pdf_path, output_pdf_path):
     
     ocr_and_process_pdf(input_pdf_path, output_pdf_path)
    
-    if __name__ == "__main__":
+if __name__ == "__main__":
     input_pdf_path = r'C:\Users\wangk.MSI\Desktop\pdf_merger\merged_output.pdf'
     output_pdf_path = r'C:\Users\wangk.MSI\Desktop\pdf_merger\ocr_processed_output.pdf'
     ocr_and_process_pdf(input_pdf_path, output_pdf_path)
